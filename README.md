@@ -10,28 +10,30 @@ Files:
 
     .
     ├─ plugins/
-    │  └── tag_cloud.rb
+    │  └── category_list.rb
     └─ source/
        └─ _includes/
           └─ custom/
              └─ asides/
                 ├─ category_list.html
-                └─ tag_cloud.html
+                └─ category_cloud.html
 
 Syntax:
 -------
-    {% tag_cloud [counter:true] %}
+
+    {% category_cloud [counter:true] %}
     {% category_list [counter:true] %}
 
 Example:
 --------
+
 In some template files, you can add the following markups.
 
-### source/_includes/custom/asides/tag_cloud.html ###
+### source/_includes/custom/asides/category_cloud.html ###
 
     <section>
       <h1>Tag Cloud</h1>
-        <span id="tag-cloud">{% tag_cloud %}</span>
+        <span id="tag-cloud">{% category_cloud %}</span>
     </section>
 
 ### source/_includes/custom/asides/category_list.html ###
@@ -40,6 +42,12 @@ In some template files, you can add the following markups.
       <h1>Categories</h1>
         <ul id="category-list">{% category_list counter:true %}</ul>
     </section>
+
+alswl 的改进
+---------
+
+支持 utf-8，使用 `category_cloud` 替换 `tag_cloud` ，
+以避免和 [真正的标签云](https://github.com/robbyedwards/octopress-tag-cloud) 冲突。
 
 Notes:
 ------
