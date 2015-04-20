@@ -32,8 +32,8 @@ In some template files, you can add the following markups.
 ### source/_includes/custom/asides/category_cloud.html ###
 
     <section>
-      <h1>Tag Cloud</h1>
-        <span id="tag-cloud">{% category_cloud %}</span>
+      <h1>Categories Cloud</h1>
+        <span id="tag-cloud">{% category_cloud counter:true %}</span>
     </section>
 
 ### source/_includes/custom/asides/category_list.html ###

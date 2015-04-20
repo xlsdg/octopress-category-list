@@ -66,7 +66,7 @@ module Jekyll
         max = count if count > max
       end
 
-      html = ''
+      html = ""
       lists.each do | category, counter |
         url = category_dir + category.gsub(/_|\P{Word}/u, '-').gsub(/-{2,}/u, '-').to_url.downcase
         style = "font-size: #{100 + (60 * Float(counter)/max)}%"
@@ -74,7 +74,7 @@ module Jekyll
         if @opts['counter']
           html << "(#{categories[category].count})"
         end
-        html << "</a> "
+        html << "</a>"
       end
       html
     end
